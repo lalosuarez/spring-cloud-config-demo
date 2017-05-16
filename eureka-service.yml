@@ -19,11 +19,11 @@ spring:
   profiles: docker
 
 server:
-  port: ${PORT:8761}
+  port: ${PORT:8762}
 
 eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://host:8080/eureka/
+      defaultZone: http://192.168.99.100:8761/eureka/
