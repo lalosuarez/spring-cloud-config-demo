@@ -18,8 +18,8 @@ eureka:
 spring:
   profiles: docker
 
-# server:
-#   port: ${PORT:8762}
+server:
+  port: ${PORT:8761}
 
 eureka:
   client:
