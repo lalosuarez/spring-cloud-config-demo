@@ -15,11 +15,11 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 ---
+server:
+  port: ${PORT:8762}
+
 spring:
   profiles: docker
-
-server:
-  port: 8762
 
 eureka:
   client:
