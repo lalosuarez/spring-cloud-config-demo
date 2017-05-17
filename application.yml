@@ -89,6 +89,7 @@ spring:
         enabled: true
 eureka:
   instance:
+    preferIpAddress: true 
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 2
   client:
