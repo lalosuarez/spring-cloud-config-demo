@@ -64,7 +64,7 @@ eureka:
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://docker:8761/eureka/
     healthcheck:
       enabled: true
     lease:
