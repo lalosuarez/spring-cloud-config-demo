@@ -70,8 +70,8 @@ server:
 spring:
   profiles: docker
 
-message: This is a message from application yml docker profile
-privateMessage: '{cipher}AQA4N82pzeLxqyYAT2+bHxS5VvldegWOUeyDIw0a0948eUgkIIuHsvoypMt1M3H4xR4ELDpHY8B9DRqu6WN6oMZNsU0yc9iQPKX7+S9DY1iDqsYkknwNnYYAukYCfP3dNGQJ0OQAHuTsm8tuY1/HOlAtn/aS5Ji+QBoTCu6235DSsEDroXFir5R36/C3KxcGSf/jvgaacDWHhOFitRuCX+W5q9m3uFs07akmoqu1TBCMvi+RUXTUD95Vi9PlmfqnhVcz7McTk1HqIEpfo7eBlZVt+hIENh51n+Ij9OfY6sgGjk/5R1F06SPya2dfewtzOHv3YpzY1fdrXFHLzvtJY31de7HWhuHo5QhVn1boZZuBVQJkAfvfJTzdJAMqIxa+RdwZAaUlIE3CUijmBTNtgZdm'
+# message: This is a message from application yml docker profile
+# privateMessage: '{cipher}AQA4N82pzeLxqyYAT2+bHxS5VvldegWOUeyDIw0a0948eUgkIIuHsvoypMt1M3H4xR4ELDpHY8B9DRqu6WN6oMZNsU0yc9iQPKX7+S9DY1iDqsYkknwNnYYAukYCfP3dNGQJ0OQAHuTsm8tuY1/HOlAtn/aS5Ji+QBoTCu6235DSsEDroXFir5R36/C3KxcGSf/jvgaacDWHhOFitRuCX+W5q9m3uFs07akmoqu1TBCMvi+RUXTUD95Vi9PlmfqnhVcz7McTk1HqIEpfo7eBlZVt+hIENh51n+Ij9OfY6sgGjk/5R1F06SPya2dfewtzOHv3YpzY1fdrXFHLzvtJY31de7HWhuHo5QhVn1boZZuBVQJkAfvfJTzdJAMqIxa+RdwZAaUlIE3CUijmBTNtgZdm'
 
 server:
   port: ${PORT:8082}
