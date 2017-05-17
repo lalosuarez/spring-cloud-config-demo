@@ -38,9 +38,8 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
-    serviceUrl:
+    # serviceUrl:
       # defaultZone: http://192.168.99.100:8761/eureka/
-      defaultZone: http://eureka-server:8761/eureka/
   server:
     # enableSelfPreservation: false
     waitTimeInMsWhenSyncEmpty: 0        
