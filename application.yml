@@ -79,12 +79,20 @@ spring:
           destination: reservations
           group: reservations-group
           durableSubscription: true
-          
+  jmx:
+    enabled: false          
+  sleuth:
+    sampler:
+      percentage: 1.0
+    log:
+      json:
+        enabled: true
 eureka:
   instance:
-    leaseRenewalIntervalInSeconds: 10
+    leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 2
   client:
+    region: docker
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://192.168.99.100:8761/eureka/
@@ -103,3 +111,18 @@ privateMessage: '{cipher}AQA4N82pzeLxqyYAT2+bHxS5VvldegWOUeyDIw0a0948eUgkIIuHsvo
 
 server:
   port: ${PORT:8081}
+
+# disable JMX
+endpoints:
+  jmx:
+    enabled: false
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF  
