@@ -4,6 +4,7 @@ spring:
 
 server:
   port: 9191
+  contextPath: /uaa
 
 logging:
   level:
@@ -11,9 +12,6 @@ logging:
       springframework:
         security: DEBUG
  
-server:
-  contextPath: /uaa
-
 security:
 sessions: if_required
 
@@ -21,18 +19,3 @@ sessions: if_required
 ---
 spring:
   profiles: docker
-
-# server:
-#   port: 9191
-
-# logging:
-#   level:
-#     org:
-#       springframework:
-#         security: DEBUG
- 
-# server:
-#   contextPath: /uaa
-
-# security:
-# sessions: if_required  
