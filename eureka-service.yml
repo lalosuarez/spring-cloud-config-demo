@@ -18,9 +18,9 @@ eureka:
     # eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka/,http://<host>:<port>/eureka/
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-    server:
-      enableSelfPreservation: false
-      waitTimeInMsWhenSyncEmpty: 0  
+  server:
+    enableSelfPreservation: false
+    waitTimeInMsWhenSyncEmpty: 0  
 
 ---
 spring:
