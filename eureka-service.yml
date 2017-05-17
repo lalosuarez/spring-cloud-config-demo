@@ -6,7 +6,7 @@ server:
 
 eureka:
   instance:
-    hostname: ${vcap.application.uris[0]}
+    # hostname: ${vcap.application.uris[0]}
     preferIpAddress: true
     # ip-address: 192.168.99.100
     # instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}    
