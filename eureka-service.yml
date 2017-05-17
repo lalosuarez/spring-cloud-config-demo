@@ -19,7 +19,7 @@ eureka:
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
   server:
-    enableSelfPreservation: false
+    # enableSelfPreservation: false
     waitTimeInMsWhenSyncEmpty: 0  
 
 ---
@@ -41,5 +41,5 @@ eureka:
     serviceUrl:
       defaultZone: http://192.168.99.100:8761/eureka/
   server:
-    enableSelfPreservation: false
+    # enableSelfPreservation: false
     waitTimeInMsWhenSyncEmpty: 0        
