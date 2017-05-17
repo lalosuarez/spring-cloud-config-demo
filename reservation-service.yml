@@ -25,7 +25,7 @@ privateMessage: '{cipher}AQA4N82pzeLxqyYAT2+bHxS5VvldegWOUeyDIw0a0948eUgkIIuHsvo
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8762/eureka/
 
 server:
     port: ${PORT:8000}
