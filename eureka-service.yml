@@ -5,6 +5,11 @@ server:
   port: ${PORT:8761}
 
 eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    preferIpAddress: true
+    # ip-address: 192.168.99.100
+    # instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}    
   client:
     registerWithEureka: false
     fetchRegistry: false
@@ -25,11 +30,16 @@ server:
   port: ${PORT:8762}
 
 eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    preferIpAddress: true
+    # ip-address: 192.168.99.100
+    # instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}    
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://192.168.99.100:8761/eureka/
-    server:
-      enableSelfPreservation: false
-      waitTimeInMsWhenSyncEmpty: 0        
+  server:
+    enableSelfPreservation: false
+    waitTimeInMsWhenSyncEmpty: 0        
