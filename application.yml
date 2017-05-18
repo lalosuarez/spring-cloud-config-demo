@@ -69,61 +69,61 @@ server:
 
 
 
-# ---
-# spring:
-#   profiles: docker
-#   cloud:
-#     stream:
-#       bindings:
-#         input:
-#           destination: reservations
-#           group: reservations-group
-#           durableSubscription: true
-#   jmx:
-#     enabled: false          
-#   sleuth:
-#     sampler:
-#       percentage: 1.0
-#     log:
-#       json:
-#         enabled: true
-# eureka:
-#   instance:
-#     preferIpAddress: true 
-#     leaseRenewalIntervalInSeconds: 5
-#     leaseExpirationDurationInSeconds: 2
-#   client:
-#     region: docker
-#     registryFetchIntervalSeconds: 5
-#     serviceUrl:
-#       defaultZone: http://192.168.99.100:8761/eureka/
-#     healthcheck:
-#       enabled: true
-#     lease:
-#       duration: 5
-#     registerWithEureka: false
-#     fetchRegistry: false
-#   server:
-#     # enableSelfPreservation: false
-#     waitTimeInMsWhenSyncEmpty: 0
+---
+spring:
+  profiles: docker
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: reservations
+          group: reservations-group
+          durableSubscription: true
+  jmx:
+    enabled: false          
+  sleuth:
+    sampler:
+      percentage: 1.0
+    log:
+      json:
+        enabled: true
+eureka:
+  instance:
+    preferIpAddress: true 
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 2
+  client:
+    region: docker
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    # enableSelfPreservation: false
+    waitTimeInMsWhenSyncEmpty: 0
 
-# message: This is a message from application yml docker profile
-# privateMessage: '{cipher}AQA4N82pzeLxqyYAT2+bHxS5VvldegWOUeyDIw0a0948eUgkIIuHsvoypMt1M3H4xR4ELDpHY8B9DRqu6WN6oMZNsU0yc9iQPKX7+S9DY1iDqsYkknwNnYYAukYCfP3dNGQJ0OQAHuTsm8tuY1/HOlAtn/aS5Ji+QBoTCu6235DSsEDroXFir5R36/C3KxcGSf/jvgaacDWHhOFitRuCX+W5q9m3uFs07akmoqu1TBCMvi+RUXTUD95Vi9PlmfqnhVcz7McTk1HqIEpfo7eBlZVt+hIENh51n+Ij9OfY6sgGjk/5R1F06SPya2dfewtzOHv3YpzY1fdrXFHLzvtJY31de7HWhuHo5QhVn1boZZuBVQJkAfvfJTzdJAMqIxa+RdwZAaUlIE3CUijmBTNtgZdm'
+message: This is a message from application yml docker profile
+privateMessage: '{cipher}AQA4N82pzeLxqyYAT2+bHxS5VvldegWOUeyDIw0a0948eUgkIIuHsvoypMt1M3H4xR4ELDpHY8B9DRqu6WN6oMZNsU0yc9iQPKX7+S9DY1iDqsYkknwNnYYAukYCfP3dNGQJ0OQAHuTsm8tuY1/HOlAtn/aS5Ji+QBoTCu6235DSsEDroXFir5R36/C3KxcGSf/jvgaacDWHhOFitRuCX+W5q9m3uFs07akmoqu1TBCMvi+RUXTUD95Vi9PlmfqnhVcz7McTk1HqIEpfo7eBlZVt+hIENh51n+Ij9OfY6sgGjk/5R1F06SPya2dfewtzOHv3YpzY1fdrXFHLzvtJY31de7HWhuHo5QhVn1boZZuBVQJkAfvfJTzdJAMqIxa+RdwZAaUlIE3CUijmBTNtgZdm'
 
-# server:
-#   port: ${PORT:8081}
+server:
+  port: ${PORT:8081}
 
-# # disable JMX
-# endpoints:
-#   jmx:
-#     enabled: false
+# disable JMX
+endpoints:
+  jmx:
+    enabled: false
 
-# logging:
-#   level:
-#     org:
-#       springframework:
-#         security: DEBUG
-#     com:
-#       netflix:
-#         eureka: OFF
-#         discovery: OFF  
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF  
